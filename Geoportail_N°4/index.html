@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Géoportail De l'Exploitation des terres de Parcours du Maroc Oriental</title>
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
+    <!-- Web Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600%7cPlayfair+Display:400i" rel="stylesheet">
+    <link href="assets/css/all.css" rel="stylesheet">
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="src/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/MarkerCluster.css" />
+    <link rel="stylesheet" href="src/css/MarkerCluster.Default.css" />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+        rel='stylesheet' />
+    <link rel="stylesheet" href="src/css/L.Control.BetterScale.css" />
+    <link rel="stylesheet" href="src/css/jquery-ui.css" />
+    <link rel="stylesheet" href="src/css/leaflet.legend.css" />
+    <!-- Plugins-->
+    <link href="assets/css/plugins.min.css" rel="stylesheet">
+    <!-- Template core CSS-->
+    <link href="assets/css/template.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader-->
+    <div class="page-loader">
+        <div class="page-loader-inner">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader end-->
+
+    <!-- Header-->
+    <header class="header header-transparent">
+        <div class="container-fluid">
+            <!-- Brand-->
+            <div class="inner-header"><a class="inner-brand" href="index.html"> CTNETROPHIA</a></div>
+            <!-- Navigation-->
+            <div class="inner-navigation collapse">
+                <div class="inner-nav onepage-nav">
+                    <ul>
+                        <li><a href="#accueil"><span class="menu-item-span">Accueil</span></a></li>
+                        <li><a href="#Description"><span class="menu-item-span">Description</span></a></li>
+                        <li><a href="#Causes"><span class="menu-item-span">Les Causes</span></a></li>
+                        <li><a href="#cartes"><span class="menu-item-span">Cartes</span></a></li>
+                        <li><a href="#team"><span class="menu-item-span">Contact</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="extra-nav">
+                <ul>
+                    <li><a class="off-canvas-open" href="#"><span class="menu-item-span"><i
+                                    class="ti-menu"></i></span></a></li>
+                    <li class="nav-toggle"><a href="#" data-toggle="collapse" data-target=".inner-navigation"><span
+                                class="menu-item-span"><i class="ti-menu"></i></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Header end-->
+
+    <!-- Wrapper-->
+    <div class="wrapper">
+        <!-- Background-->
+        <section class="module-cover parallax fullscreen text-center" id="accueil"
+            data-background="assets/images/Background.jpg" data-overlay="0.5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="m-b-20"><strong>Une Analyse socio-spatiale de l'exploitation des terres de parcours du Maroc Oriental: 
+                            <br>Cas de la commune Aïn Béni Mathar
+                            </strong></h4>
+                        <p class="m-b-40">L'agriculture et l'élevage sont les piliers primitifs de l'économie des peuples arabes. 
+                            Les deux connaissent un changement radical ces dernières décennies. 
+                             L'élevage, en particulier, subit des mutations dues essentiellement aux facteurs d'ordre anthropologique.
+                              Lesquels? </p>
+                        <p><a class="btn btn-circle btn-outline-new-white" href="#Description">Commencer par Visualiser</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hero end-->
+    </div>
+
+
+    <!-- Description-->
+    <section class="module" id="Description" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 m-auto text-center">
+                    <h1>Description du Projet</h1>
+
+                </div>
+            </div>
+            <!-- Spacer-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="space" data-mY="60px"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="lead">  L’élevage ne peut contribuer au développement économique et à l'essor social que lorsque les ressources disponibles à savoir le pâturage, l’eau, les espaces de parcours…sont bien réparties entre les éleveurs.
+                        <br> Le Maroc oriental possède un fort potentiel en matière d’étendue de parcours : 3.2 millions d’hectares.
+                        <br> Force est de constater que l’élevage dans ces zones est soumis à un changement considérable dû essentiellement aux facteurs d’ordre anthropologique.
+                        <br> Les études menées sur les changements qui affectent ce système témoignent d’une dynamique régressive de la végétation suite à la dégradation des ressources pastorales
+                         parallèlement à une augmentation des effectifs des animaux conduits sur parcours, estimée de 2.7 à 3% pour les ovins et 0.9 à 9% pour les caprins .
+                         </p>
+                </div>
+                <div class="col-md-6">
+                    <p class="lead"> Le but de ce site web est d’associer aux résultats des recherches effectuées 
+                        une cartographie qui permettra une meilleure présentation des données, 
+                        ce qui, d’une part, facilite l’analyse et l’interprétation des résultats, 
+                        et d’autre part permettra à un utilisateur lambda en particulier un éleveur de se renseigner 
+                        et de l’inciter à une précise de décision favorable à la bonne gestion des ressources disponibles.
+                        <br> La zone d'étude concernée est la commune <strong>Aïn Béni Mathar</strong>, située au Nord-Oriental marocain. 
+                        C'est une commune qui fournit essentiellement le pays en bétail. D'après le recensement de 2014, sa population est estimée à 
+                        environ 16289 habitants répartis avec une densité d'environ 543 hbts/km².
+                        </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Description end-->
+
+
+    <!-- Causes-->
+    <section class="module" id="Causes">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 m-auto text-center">
+                    <h1>Quelles causes ?</h1>
+                    <p> Les facteurs affectant le système pastoral dans l'Oriental marocain, et en particulier la commune 
+                        Aïn Béni Mathar, sont principlament de dimension sociale et territoriale.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="space" data-mY="30px"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="icon-box">
+                        <div class="icon-box-icon"><span class="ti-info"></span></div>
+                        <div class="icon-box-title">
+                            <h6> Dimension Sociale </h6>
+                        </div>
+                        <div class="icon-box-content">
+                            <p> La dimension sociale des changements observés dans le système pastoral de Béni Mathar
+                                est beaucoup plus reative à la répartition spatiale des <strong> fractions </strong> ou <strong> lignages </strong>dans la commune d'Aïn Béni Mathar.
+                                <br> Sur environ 1690 km²,  la tribu d’Ain Béni Mathar
+                            est plus sédentaire sur un espace relativement plus précis pour ses 4 fractions :
+                            Ouled Benaissa , Ouled Hammadi , Ouled Kaddour , et El Fokra. 
+                            <br> L’exploitation des ressources est soumise surtout à un ‘rapport de force’ entre les
+                            usagers des terres de parcours ; il en témoigne aussi les disparités sociales liées à
+                            l’accès ou à l’utilisation des ressources pastorales. 
+                            <br> Le poids des fractions ou de
+                            personnes influentes, est déterminant dans l’accès aux ressources. 
+                            <br> Ceci n’est pas
+                            toujours expliqué par un effectif d’animaux plus élevé ou par une population plus
+                            grande qui impose cette dominance ou cette inégalité d’accès à l’espace pastoral. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="icon-box">
+                        <div class="icon-box-icon"><span class="ti-info"></span></div>
+                        <div class="icon-box-title">
+                            <h6>Dimension Spatiale </h6>
+                        </div>
+                        <div class="icon-box-content">
+                            <p>La dimension spatiale est fondamentale dans la compréhension des modes de
+                                gestion et d’exploitation des parcours. 
+                                <br> Chaque fraction ou groupe d’usagers dispose
+                                d’un territorial propre reconnu par les siens. 
+                                <br> Les sites de pacages correspondent
+                                traditionnellement à des quartiers de parcours, dont les limites, souvent difficiles à
+                                définir avec précision, sont reconnues moyennant des repères physiques, naturels
+                                ou parfois historiques.
+                                <br> Le consensus tribal reconnaît aux groupes sociaux des droits sur des territoires
+                                pastoraux et des liens ancrés dans l’espace. Le territoire tribal est structuré en lieu
+                                habituel de pâturage (‘Wolfs’ qui est l’aire d’un groupe ethnique, où sont situés ses
+                                parcours, ses terres de cultures, ses ressources en eau) régit par le droit coutumier</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="icon-box">
+                        <div class="icon-box-icon"><span class="ti-info"></span></div>
+                        <div class="icon-box-title">
+                            <h6>Autres facteurs à discuter </h6>
+                        </div>
+                        <div class="icon-box-content">
+                            <p> Mis à part les facteurs ci-contre expliqués, s'ajoute à cette liste <strong> la taille de l'élevage </strong>, facteur toutefois néglieable selon les cas. 
+                                <br> En effet, suivant la taille de leurs élevages, les éleveurs ont des
+                                comportements variables souvent influencés par leur statut socio-économique.  
+                                <br> Les petits éleveurs, en moyenne de 27 têtes de femelles reproductrices 
+                                ont un comportement de subsistance et passif face aux contraintes du milieu. 
+                                <br>  Ils manquent d’anticipation lors des années de sécheresse et rencontrent fréquemment
+                                des problèmes financiers pour subvenir à leurs besoins et se
+                                plaignent souvent des grands éleveurs qui exploitent plus les espaces pour le
+                                pâturage (par les effectifs et moyens de déplacements) et la mise en culture.  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Causes End-->
+
+    <!-- Parallax -->
+    <!-- Section-->
+    <section class="module parallax" data-background="assets/images/Background.jpg" data-overlay="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-9 m-auto text-center">
+                    <h2>Les Cartes</h2>
+                    <p class="lead">Une image vaut mille mot!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section end-->
+
+
+    <!-- Maps-->
+    <!-- Map 1 -->
+    <section class="module" id="cartes">
+        <div class="container" id="carte1">
+            <div class="row">
+                <!-- Map Title -->
+                <div class="col-md-8 m-auto text-center">
+                    <h3>Carte des Quartiers Toponymiques </h3>
+                    <p class="lead">Dimension Spatiale</p>
+                </div>
+            </div>
+            <!-- Spacer -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="space" data-my="60px" style="margin-top: 60px;"></div>
+                </div>
+            </div>
+            <!-- Map + Info -->
+            <div class="row">
+                <!-- Map div -->
+                <div class="col-md-8">
+                    <div id="map_1"></div>
+                </div>
+                <!-- Info -->
+                <div class="col-md-4">
+
+                    <div class="space" data-MY="20px"></div>
+                    <div class="icon-box icon-box-left">
+                        <div class="icon-box-icon"><span class="ti-info"></span></div>
+                        <div class="icon-box-title">
+                            <h6>A savoir</h6>
+                        </div>
+                        <div class="icon-box-content">
+                            <p>L’exploitation des sites pastoraux est loin d’être équitable entre les usagers malgré
+                                l’ancrage de la collectivité. Les décisions se font au niveau individuel et tiennent
+                                compte très peu de l’état des ressources . 
+                                <br> Il en découle des modes d’usage opportunistes contribuant nettement à la dynamique régressive
+                                observée au niveau de la zone. 
+                                 </p>
+
+                            <!-- Modal Button -->
+                            <button class="btn btn btn-outline-brand m-b-30" type="button" data-toggle="modal"
+                                data-target="#modal-1">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="icon-box icon-box-left">
+                        <div class="icon-box-icon"><span class="ti-new-window"></span></div>
+                        <div class="icon-box-title">
+                            <h6>Métadonnées</h6>
+                        </div>
+                        <div class="icon-box-content">
+                            <p><a href="assets/metadata/desertification_na.htm" target="_blank">Télécharger</a> les
+                                métadonnées suivant
+                                la norme ISO19139.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Les quartiers...</h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">×</span></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    <br> Avec la régression des ressources due à la dégradation avancée des sites exploités, l’accès aux pâturages ne peut se passer
+                                    comme il se pratiquait autrefois. 
+                                    <br> Avec beaucoup de méfiance et de prudence, les
+                                    locaux expulsent les étrangers, par différentes pressions à caractères parfois
+                                    individuels rudes, en crainte de fixation sur leurs espaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal End -->
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Map 2 -->
+    <section class="module" id="cartes">
+        <div class="container">
+            <div class="row">
+                <!-- Map Title -->
+                <div class="col-md-8 m-auto text-center">
+                    <h3>Carte des Fractions</h3>
+                    <p class="lead">Dimension Sociale</p>
+                </div>
+            </div>
+            <!-- Spacer -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="space" data-my="60px" style="margin-top: 60px;"></div>
+                </div>
+            </div>
+            <!-- Map + Info -->
+            <div class="row">
+
+                <!-- Info -->
+                <div class="col-md-4">
+
+                    <div class="space" data-MY="20px"></div>
+                    <div class="icon-box icon-box-left">
+                        <div class="icon-box-icon"><span class="ti-info"></span></div>
+                        <div class="icon-box-title">
+                            <h6>A propos</h6>
+                        </div>
+                        <div class="icon-box-content">
+                            <p>L’importance des dimensions socio-spatiales trouve des arguments dans les faits de
+                                société qui constituent l'agent décisif de l'explication géographique et que les situations actuelles sont souvent des consensus dictés par des faits
+                                et des événements relevant du passé. Les aires de déplacement des entités sociales
+                                étudiées indiquent que le collectif, qui désignait l’accès régulé d'un groupe d'individus
+                                avec des droits et des obligations, a été réduit au fil des années à un espace
+                                approprié de fait, reconnu pour des groupes ethniques déterminés. 
+                                <br>L’exploitation des parcours montre des inégalités manifestes...</p>
+
+                            <!-- Modal Button -->
+                            <button class="btn btn btn-outline-brand m-b-30" type="button" data-toggle="modal"
+                                data-target="#modal-2">Détails</button>
+                        </div>
+                    </div>
+
+                    <div class="icon-box icon-box-left">
+                        <div class="icon-box-icon"><span class="ti-new-window"></span></div>
+                        <div class="icon-box-title">
+                            <h6>Métadonnées</h6>
+                        </div>
+                        <div class="icon-box-content">
+                            <p><a href="assets/metadata/deforestation_na.htm" target="_blank">Télécharger</a> les
+                                métadonnées suivant la
+                                norme ISO19139.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="modal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Chez les Béni Mathar</h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">×</span></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    - Les fractions Ouled Hammadi et Ouled Kaddour se distinguent par un cheptel relativement faible (d’environ
+5000 têtes chacune) et exploitent des espaces plus larges (plus de 55000 ha par
+fraction) ;
+<br> - La fraction El Fokra détient un cheptel de taille similaire mais un espace plus réduit (21000 ha
+environ) ;
+<br> - La fraction Ouled Benaissa par contre se caractérise par un cheptel de taille plus important (4 fois plus
+grand) sans pour autant disposer d’espace suffisant dans la commune (environ
+10000 ha). Pour remédier à l’insuffisance de l’espace en évitant les terres
+cultivées , les bergers de cette fraction sont souvent à la recherche
+des pâturages plus favorables au Nord mis en défens par
+le département forestier. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal End -->
+
+                <!-- Map div -->
+                <div class="col-md-8">
+                    <div id="map_2"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Maps end-->
+
+    <!-- Author-->
+    <section class="module" id="team">
+        <div class="container">
+            <div class="row">
+                <!-- Row Title -->
+                <div class="col-md-8 m-auto text-center">
+                    <h3>Réalisé par :</h3>
+                </div>
+            </div>
+            <!-- Spacer -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="space" data-MY="30px"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="space" data-MY="50px"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="review-slides owl-carousel">
+                        <div class="review">
+                            <div class="review-icons"><img src="assets\images\team\Arnauld.jpg" alt="">
+                            </div>
+                            <div class="review-content">
+                                <blockquote>
+                                    <h3>AGBOGAH Y. Arnauld </h3>
+                                    <footer class="blockquote-footer">Elève Ingénieur Géomètre-Topographe</footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="space" data-MY="50px"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Author end-->
+
+
+    <!-- Footer-->
+    <footer class="footer">
+        <div class="footer-widgets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <!-- Text widget-->
+                        <aside class="widget widget-text">
+                            <div class="widget-title">
+                                <h6> Contact</h6>
+                            </div>
+                            <div class="textwidget">
+                                <p><strong> AGBOGAH Y. Arnauld - Elève Ingénieur Géomètre-Topographe, IAV Hassan 2 </strong><br>E-mail: yavio.arnauld@gmail.com</p>
+                                <ul class="social-icons">
+                                    <li><a href="https://www.linkedin.com/in/agbogah-yaovi-arnauld-6a9834207/"
+                                            target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+
+                        </aside>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Twitter widget-->
+
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Recent works-->
+                        <aside class="widget widget-recent-works">
+
+                            <ul>
+                                <li><a href="#"><img src="assets/images/avatar/ESGIT.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="assets/images/avatar/IAV.png" alt=""></a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright">
+                            <p>© 2021 Projet Web Mapping . Encadré par Pr. HAJJI Hicham et Réalisé par <a
+                                    href="https://www.linkedin.com/in/agbogah-yaovi-arnauld-6a9834207/"
+                                    target="_blank"> AGBOGAH Y. Arnauld</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end-->
+    </div>
+    <!-- Wrapper end-->
+
+
+    <!-- To top button--><a class="scroll-top" href="#top"><i class="fas fa-angle-up"></i></a>
+
+
+    <!-- Scripts-->
+
+    <!------------ Scripts ------------>
+    <script src="src/leaflet/leaflet.js"></script>
+    <script src="src/js/leaflet-providers.js"></script>
+
+    <!------------ Data ------------>
+    <script src="data/contour_na.js" type="text/javascript"></script>
+    <script src="data/desert_na_reg.js" type="text/javascript"></script>
+    <script src="data/defor_na.js" type="text/javascript"></script>
+    <script src="data/incendies_na.js" type="text/javascript"></script>
+
+    <!------------ Plugins ------------>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+    <script src="src/js/leaflet.markercluster-src.js"></script>
+    <script src="src/js/leaflet.markercluster.js"></script>
+    <script src="src/js/L.Control.BetterScale.js"></script>
+    <script src="src/js/jquery-3.5.1.js" type="text/javascript"></script>
+
+    <script src="src/js/jquery-ui.js" type="text/javascript"></script>
+    <script src="src/js/leaflet.SliderControl.min.js" type="text/javascript"></script>
+    <script src="src/js/leaflet.legend.js" type="text/javascript"></script>
+
+    <!--     <script src="assets/js/custom/jquery.min.js"></script>
+ -->
+    <!--     <script src="assets/js/custom/popper.min.js"></script>
+ -->
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/js/all.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0rANX07hh6ASNKdBr4mZH0KZSqbHYc3Q"></script>
+    <script src="assets/js/custom/plugins.min.js"></script>
+    <script src="assets/js/custom/custom.min.js"></script>
+</body>
+
+</html>
